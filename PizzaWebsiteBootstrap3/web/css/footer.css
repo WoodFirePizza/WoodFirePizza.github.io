@@ -1,0 +1,36 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22-Feb-2017, 19:32:13
+    Author     : aajoubert
+*/
+
+html, body {
+  height: 100%;
+  margin: 0;
+ 
+  
+}
+.wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -150px;
+}
+.footer,
+.push {
+  height: 150px;
+  color:white;
+  
+}
+.footer-background{
+    background-color: rgba(128,128,128,0.5);
+}
+
+.footer a {
+    color: black;
+}
