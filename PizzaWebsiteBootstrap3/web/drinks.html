@@ -11,6 +11,9 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>Wood Fire</title>
+        
+        <!--Icon-->
+        <link rel="shortcut icon" type="image/x-icon" href="Res/Images/logo.ico">
 
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +37,7 @@ and open the template in the editor.
         <![endif]-->
     </head>
     <body>
-        
+        <section class="main">
         <div class="wrapper">
         <!-- Navigation Bar and Toggle for Mobile -->
             <nav class="navbar navbar-default navbar-fixed-top">
@@ -62,6 +65,7 @@ and open the template in the editor.
         <!-- NavBar Right Options -->
                     <ul class="nav navbar-nav navbar-right">
                       <li><a href="#" data-toggle="modal" data-target="#loginModal">login</a></li>
+                      <li><a href="signup.html">SignUp</a></li>
                       <li class="nav-item">
                           <div style="float: right; cursor: pointer; padding-top: 15px">
                             <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
@@ -79,196 +83,375 @@ and open the template in the editor.
             <br/>
         
          <!-- Drinks Menu Items -->
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <a class="pop gallery-box">
-                            <img src="Res/Images/Drinks/Coke.jpg" class="img-responsive" alt="Ice cold Coca Cola" title="Coca Cola" height="350" width="350">
-                            <div class="gallery-box-caption">
-                                <div class="gallery-box-content">
-                                    <div>
-                                        <h4>Click Me To Customise</h4>
+            <div class="container">
+                <div class="row">
+                     <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <a class="pop gallery-box">
+                                <img src="Res/Images/Drinks/Coke.jpg" class="img-responsive" alt="Ice Cold Coca Cola" title="Coca Cola">
+                                <div class="gallery-box-caption">
+                                    <div class="gallery-box-content">
+                                        <div>
+                                            <h4>Click Me To Customise</h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                        <div class="caption">
-                            <h3>Coca Cola</h3>
-                            <p>Ice cold Coca Cola</p>
-                            <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                                <div class="btn-group" role="group">
-                                  <button class="btn btn-default my-cart-btn" data-id="16" data-name="Coca Cola" data-summary="summary 1" data-price="2" data-quantity="1" data-image="http://placehold.it/50x50">Add to Basket</button>
+                            </a>
+                            <div class="caption">
+                                <fieldset>
+                                    <legend>Coca Cola</legend>
+                                    <p>Ice Cold Coca Cola</p>
+                                 </fieldset>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-5">
+                                        <div class="form-group">
+
+
+                                              <select class="form-control col-sm-2" name="expiryMonth" id="exMonth">
+                                                <option value="01">Can(330ml)</option>
+                                                <option value="02">Bottle(500ml)</option>
+                                                <option value="03">Bottle(2ltr)</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                            <div class="input-group number-spinner">
+                                                    <span class="input-group-btn">
+                                                            <button class="btn btn-default" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                    </span>
+                                                    <input type="text" class="form-control text-center" value="1">
+                                                    <span class="input-group-btn">
+                                                            <button class="btn btn-default" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                    </span>
+                                            </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-3">
+                                        <h4 id="pizzaPrice">£1.50</h4>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                    <div class="btn-group" role="group">
+                                      <button class="btn btn-default my-cart-btn" data-id="1" data-name="Coca cola" data-summary="summary 1" data-price="1.50" data-quantity="1" data-image="Res/Images/Drinks/Coke.jpg">Add to Basket</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <a class="pop gallery-box">
+                                <img src="Res/Images/Drinks/Fanta.jpg" class="img-responsive" alt="Ice Cold Fanta" title="Fanta">
+                                <div class="gallery-box-caption">
+                                    <div class="gallery-box-content">
+                                        <div>
+                                            <h4>Click Me To Customise</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="caption">
+                                <fieldset>
+                                    <legend>Fanta</legend>
+                                    <p>Ice Cold Fanta</p>
+                                 </fieldset>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-5">
+                                        <div class="form-group">
+
+
+                                              <select class="form-control col-sm-2" name="expiryMonth" id="exMonth">
+                                                <option value="01">Can(330ml)</option>
+                                                <option value="02">Bottle(500ml)</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                            <div class="input-group number-spinner">
+                                                    <span class="input-group-btn">
+                                                            <button class="btn btn-default" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                    </span>
+                                                    <input type="text" class="form-control text-center" value="1">
+                                                    <span class="input-group-btn">
+                                                            <button class="btn btn-default" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                    </span>
+                                            </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-3">
+                                        <h4 id="pizzaPrice">£1.50</h4>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                    <div class="btn-group" role="group">
+                                      <button class="btn btn-default my-cart-btn" data-id="2" data-name="Fanta" data-summary="summary 1" data-price="1.50" data-quantity="1" data-image="Res/Images/Drinks/Fanta.jpg">Add to Basket</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <a class="pop gallery-box">
+                                <img src="Res/Images/Drinks/7Up.jpg" alt="Ice Cold 7Up" title="7Up">
+                                <div class="gallery-box-caption">
+                                    <div class="gallery-box-content">
+                                        <div>
+                                            <h4>Click Me To Customise</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="caption">
+                                <fieldset>
+                                    <legend>7Up</legend>
+                                    <p>Ice Cold 7Up</p>
+                                 </fieldset>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-5">
+                                        <div class="form-group">
+
+
+                                              <select class="form-control col-sm-2" name="expiryMonth" id="exMonth">
+                                                <option value="01">Can(330ml)</option>
+                                                <option value="02">Bottle(500ml)</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                            <div class="input-group number-spinner">
+                                                    <span class="input-group-btn">
+                                                            <button class="btn btn-default" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                    </span>
+                                                    <input type="text" class="form-control text-center" value="1">
+                                                    <span class="input-group-btn">
+                                                            <button class="btn btn-default" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                    </span>
+                                            </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-3">
+                                        <h4 id="pizzaPrice">£1.50</h4>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                    <div class="btn-group" role="group">
+                                      <button class="btn btn-default my-cart-btn" data-id="3" data-name="7Up" data-summary="summary 1" data-price="1.50" data-quantity="1" data-image="Res/Images/Drinks/7Up.jpg">Add to Basket</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <a class="pop gallery-box">
+                                <img src="Res/Images/Drinks/mvsw.png" class="img-responsive" alt="Mountain Valley Spring Water" title="Mountain Valley Spring Water">
+                                <div class="gallery-box-caption">
+                                    <div class="gallery-box-content">
+                                        <div>
+                                            <h4>Click Me To Customise</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="caption">
+                                <fieldset>
+                                    <legend>Mountain Valley Spring Water</legend>
+                                    <p>Mountain Valley Spring Water</p>
+                                 </fieldset>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-5">
+                                        <div class="form-group">
+
+
+                                              <select class="form-control col-sm-2" name="expiryMonth" id="exMonth">
+                                                
+                                                <option value="02">Bottle(500ml)</option>
+                                                <option value="01">Bottle (1.5ltr))</option>
+                                                
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                            <div class="input-group number-spinner">
+                                                    <span class="input-group-btn">
+                                                            <button class="btn btn-default" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                    </span>
+                                                    <input type="text" class="form-control text-center" value="1">
+                                                    <span class="input-group-btn">
+                                                            <button class="btn btn-default" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                    </span>
+                                            </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-3">
+                                        <h4 id="pizzaPrice">£1.50</h4>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                    <div class="btn-group" role="group">
+                                      <button class="btn btn-default my-cart-btn" data-id="4" data-name="Mountain Valley Spring Water" data-summary="summary 1" data-price="1.50" data-quantity="1" data-image="Res/Images/Drinks/mvsw.png">Add to Basket</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 
-                <div class="col-sm-6 col-md-4">
-                  <div class="thumbnail">
-                        <a class="pop gallery-box">
-                            <img src="Res/Images/Drinks/Fanta.jpg" class="img-responsive" alt="Ice cold Fanta" title="Fanta" height="350" width="350">
-                            <div class="gallery-box-caption">
-                                <div class="gallery-box-content">
-                                    <div>
-                                        <h4>Click Me To Customise</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                      <div class="caption">
-                        <h3>Fanta</h3>
-                        <p>Ice cold Fanta</p>
-                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                            <div class="btn-group" role="group">
-                              <button class="btn btn-default my-cart-btn" data-id="17" data-name="Fanta" data-summary="summary 1" data-price="2" data-quantity="1" data-image="http://placehold.it/50x50">Add to Basket</button>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-6 col-md-4">
-                  <div class="thumbnail">
-                        <a class="pop gallery-box">
-                            <img src="Res/Images/Drinks/7Up.jpg" class="img-responsive" alt="Ice cold 7up" title="7up" height="350" width="350">
-                            <div class="gallery-box-caption">
-                                <div class="gallery-box-content">
-                                    <div>
-                                        <h4>Click Me To Customise</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                      <div class="caption">
-                        <h3>7up</h3>
-                        <p>7up</p>
-                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                            <div class="btn-group" role="group">
-                              <button class="btn btn-default my-cart-btn" data-id="18" data-name="Sprite" data-summary="summary 1" data-price="2" data-quantity="1" data-image="http://placehold.it/50x50">Add to Basket</button>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
             
-            <div class="col-sm-6 col-md-4">
-                  <div class="thumbnail">
-                        <a class="pop gallery-box">
-                            <img src="Res/Images/Drinks/mvsw.png" class="img-responsive" alt="Mountain Valley Spring Water" title="Mountain Valley Spring Water" height="350" width="350">
-                            <div class="gallery-box-caption">
-                                <div class="gallery-box-content">
-                                    <div>
-                                        <h4>Click Me To Customise</h4>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <a class="pop gallery-box">
+                                <img src="Res/Images/Drinks/redbull.jpg" class="img-responsive" alt="Ice Cold Red Bull" title="Red Bull">
+                                <div class="gallery-box-caption">
+                                    <div class="gallery-box-content">
+                                        <div>
+                                            <h4>Click Me To Customise</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="caption">
+                                <fieldset>
+                                    <legend>Red Bull</legend>
+                                    <p>Ice Cold Red Bull</p>
+                                 </fieldset>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-5">
+                                        <div class="form-group">
+
+
+                                              <select class="form-control col-sm-2" name="expiryMonth" id="exMonth">
+                                                <option value="01">Can(330ml)</option>
+                                                <option value="02">Can(750ml)</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                            <div class="input-group number-spinner">
+                                                    <span class="input-group-btn">
+                                                            <button class="btn btn-default" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                    </span>
+                                                    <input type="text" class="form-control text-center" value="1">
+                                                    <span class="input-group-btn">
+                                                            <button class="btn btn-default" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                    </span>
+                                            </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-3">
+                                        <h4 id="pizzaPrice">£1.50</h4>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                    <div class="btn-group" role="group">
+                                      <button class="btn btn-default my-cart-btn" data-id="5" data-name="Red Bull" data-summary="summary 1" data-price="1.50" data-quantity="1" data-image="Res/Images/Drinks/redbull.jpg">Add to Basket</button>
                                     </div>
                                 </div>
                             </div>
-                        </a>
-                      <div class="caption">
-                        <h3>Mountain Valley Spring Water</h3>
-                        <p>Mountain Valley Spring Water</p>
-                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                            <div class="btn-group" role="group">
-                              <button class="btn btn-default my-cart-btn" data-id="19" data-name="Lilt" data-summary="summary 1" data-price="2" data-quantity="1" data-image="http://placehold.it/50x50">Add to Basket</button>
-                            </div>
                         </div>
                     </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-6 col-md-4">
-                  <div class="thumbnail">
-                        <a class="pop gallery-box">
-                            <img src="Res/Images/Drinks/redbull.jpg" class="img-responsive" alt="Red Bull" title="Red Bull" height="350" width="350">
-                            <div class="gallery-box-caption">
-                                <div class="gallery-box-content">
-                                    <div>
-                                        <h4>Click Me To Customise</h4>
+                    
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <a class="pop gallery-box">
+                                <img src="Res/Images/Drinks/Red Bull Cola.jpg" class="img-responsive" alt="Ice Cold Red Bull Cola" title="Red Bull Cola">
+                                <div class="gallery-box-caption">
+                                    <div class="gallery-box-content">
+                                        <div>
+                                            <h4>Click Me To Customise</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="caption">
+                                <fieldset>
+                                    <legend>Red Bull Cola</legend>
+                                    <p>Ice Cold Red Bull Cola</p>
+                                 </fieldset>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-5">
+                                        <div class="form-group">
+
+
+                                              <select class="form-control col-sm-2" name="expiryMonth" id="exMonth">
+                                                <option value="01">Can(330ml)</option>
+                                                <option value="02">Can(750ml)</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                            <div class="input-group number-spinner">
+                                                    <span class="input-group-btn">
+                                                            <button class="btn btn-default" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                    </span>
+                                                    <input type="text" class="form-control text-center" value="1">
+                                                    <span class="input-group-btn">
+                                                            <button class="btn btn-default" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                    </span>
+                                            </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-3">
+                                        <h4 id="pizzaPrice">£1.50</h4>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                    <div class="btn-group" role="group">
+                                      <button class="btn btn-default my-cart-btn" data-id="6" data-name="Red Bull Cola" data-summary="summary 1" data-price="1.50" data-quantity="1" data-image="Res/Images/Drinks/Red Bull Cola.jpg">Add to Basket</button>
                                     </div>
                                 </div>
                             </div>
-                        </a>
-                      <div class="caption">
-                        <h3>Red Bull</h3>
-                        <p>Red Bull</p>
-                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                            <div class="btn-group" role="group">
-                              <button class="btn btn-default my-cart-btn" data-id="20" data-name="Spring Water" data-summary="summary 1" data-price="1" data-quantity="1" data-image="http://placehold.it/50x50">Add to Basket</button>
-                            </div>
                         </div>
                     </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-6 col-md-4">
-                  <div class="thumbnail">
-                        <a class="pop gallery-box">
-                            <img src="Res/Images/Drinks/Red Bull Cola.jpg" class="img-responsive" alt="Red Bull Cola" title="Red Bull Cola" height="350" width="350">
-                            <div class="gallery-box-caption">
-                                <div class="gallery-box-content">
-                                    <div>
-                                        <h4>Click Me To Customise</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                      <div class="caption">
-                        <h3>Red Bull Cola</h3>
-                        <p>Red Bull Cola</p>
-                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                            <div class="btn-group" role="group">
-                              <button class="btn btn-default my-cart-btn" data-id="21" data-name="Oasis" data-summary="summary 1" data-price="2" data-quantity="1" data-image="http://placehold.it/50x50">Add to Basket</button>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>  
-               
             </div>
         </div>
         
             <div class="push"></div>
         </div>
         
+        </section>
+        
         <!-- Footer -->
         <br/>
-        <footer class="footer">
-            <div class="container">
-                <div class="row" >
-                    <div class="col-md-2">
-                        <b>Store Location</b>
-                        <br/>
-                        <p>Wood Fire <br>
-                                13 Mutley Plain <br>
-                                Plymouth <br>
-                                PL4 8HY
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <b>About</b>
-                        <br/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Maecenas gravida sollicitudin nulla, et posuere nibh euismod vel.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <b>Contact Us</b>
-                        <br/>
-                        <p>1604 666 222 <br>
-                            <a href="#">info@woodfire.com</a> <br>
+       <footer class="hiddenFooter">
+        <div>
+            <div class="row" >
+                <div class="col-md-2" id="location">
+                    <b>Store Location</b>
+                    <br/>
+                    <p>Wood Fire <br>
+                            13 Mutley Plain <br>
+                            Plymouth <br>
+                            PL4 8HY
+                    </p>
+                </div>
+                <div class="col-md-8">
+                    <b>About</b>
+                    <br/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Maecenas gravida sollicitudin nulla, et posuere nibh euismod vel.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    </p>
+                </div>
+                <div class="col-md-2" id="contact">
+                    <b>Contact Us</b>
+                    <br/>
+                    <p>1604 666 222 <br>
+                        <a href="#">info@woodfire.com</a> <br>
 
-                            <button type="button" class="btn btn-outline-fb"><i class="fa fa-facebook-square" aria-hidden="true"></i></button>
-                            <button type="button" class="btn btn-outline-tw"><i class="fa fa-twitter-square" aria-hidden="true"></i></button>
-                            <button type="button" class="btn btn-outline-in"><i class="fa fa-instagram" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-outline-fb"><i class="fa fa-facebook-square" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-outline-tw"><i class="fa fa-twitter-square" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-outline-in"><i class="fa fa-instagram" aria-hidden="true"></i></button>
 
-                        </p>
+                    </p>
 
-                    </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
         
         <!-- Modal -->
                 <div class="modal fade" id="pizzaModal" role="dialog">

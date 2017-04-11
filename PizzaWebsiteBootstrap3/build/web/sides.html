@@ -11,6 +11,9 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>Wood Fire</title>
+        
+        <!--Icon-->
+        <link rel="shortcut icon" type="image/x-icon" href="Res/Images/logo.ico">
 
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -20,12 +23,12 @@ and open the template in the editor.
 
          <!-- Custom CSS -->
         <link href="css/social-buttons.css" rel="stylesheet"/>
-        <link href="css/footer.css" rel="stylesheet"/>
+        <link href="css/footer_Home.css" rel="stylesheet"/>
         <link href="css/menu-items.css" rel="stylesheet"/>
         <link href="css/modal-buttons.css" rel="stylesheet" type="text/css"/>
         <link href="css/background.css" rel="stylesheet" type="text/css"/>
         <link href="css/navbar.css" rel="stylesheet" type="text/css"/>
-
+        <link href="css/scroll.css" rel="stylesheet" type="text/css"/>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -34,6 +37,7 @@ and open the template in the editor.
         <![endif]-->
     </head>
     <body>
+        <section class="main">
         <div class="wrapper">
         <!-- Navigation Bar and Toggle for Mobile -->
             <nav class="navbar navbar-default navbar-fixed-top">
@@ -61,6 +65,7 @@ and open the template in the editor.
         <!-- NavBar Right Options -->
                     <ul class="nav navbar-nav navbar-right">
                       <li><a href="#" data-toggle="modal" data-target="#loginModal">login</a></li>
+                      <li><a href="signup.html">SignUp</a></li>
                       <li class="nav-item">
                           <div style="float: right; cursor: pointer; padding-top: 15px">
                             <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
@@ -97,7 +102,7 @@ and open the template in the editor.
                             <p>Delicious garlic bread</p>
                             <div class="btn-group btn-group-justified" role="group" aria-label="...">
                                 <div class="btn-group" role="group">
-                                  <button class="btn btn-default my-cart-btn" data-id="10" data-name="Garlic Bread" data-summary="summary 1" data-price="10" data-quantity="1" data-image="http://placehold.it/50x50">Add to Basket</button>
+                                  <button class="btn btn-default my-cart-btn" data-id="10" data-name="Garlic Bread" data-summary="summary 1" data-price="10" data-quantity="1" data-image="Res/Images/Sides/garlic-cheese-sticks.jpg">Add to Basket</button>
                                 </div>
                             </div>
                         </div>
@@ -229,45 +234,59 @@ and open the template in the editor.
         
             <div class="push"></div>
         </div>
+            
+        <!-- Scroll -->
+        <div class="wrap-scrolldownhoney">
+             <div class="scrolldownhoney">
+                <svg height="30" width="10">
+                <circle class="scrolldownhoney-c1" cx="5" cy="15" r="2" />
+                <circle class="scrolldownhoney-c2" cx="5" cy="15" r="2" />
+                </svg>
+            </div>
+            <strong>Scroll down</strong>
+        </div>
+        <!-- Scroll -->
+        
+        </section>
         
         <!-- Footer -->
         <br/>
-        <footer class="footer">
-            <div class="container">
-                <div class="row" >
-                    <div class="col-md-2">
-                        <b>Store Location</b>
-                        <br/>
-                        <p>Wood Fire <br>
-                                13 Mutley Plain <br>
-                                Plymouth <br>
-                                PL4 8HY
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <b>About</b>
-                        <br/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Maecenas gravida sollicitudin nulla, et posuere nibh euismod vel.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <b>Contact Us</b>
-                        <br/>
-                        <p>1604 666 222 <br>
-                            <a href="#">info@woodfire.com</a> <br>
+       <footer class="hiddenFooter">
+        <div>
+            <div class="row" >
+                <div class="col-md-2" id="location">
+                    <b>Store Location</b>
+                    <br/>
+                    <p>Wood Fire <br>
+                            13 Mutley Plain <br>
+                            Plymouth <br>
+                            PL4 8HY
+                    </p>
+                </div>
+                <div class="col-md-8">
+                    <b>About</b>
+                    <br/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Maecenas gravida sollicitudin nulla, et posuere nibh euismod vel.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    </p>
+                </div>
+                <div class="col-md-2" id="contact">
+                    <b>Contact Us</b>
+                    <br/>
+                    <p>1604 666 222 <br>
+                        <a href="#">info@woodfire.com</a> <br>
 
-                            <button type="button" class="btn btn-outline-fb"><i class="fa fa-facebook-square" aria-hidden="true"></i></button>
-                            <button type="button" class="btn btn-outline-tw"><i class="fa fa-twitter-square" aria-hidden="true"></i></button>
-                            <button type="button" class="btn btn-outline-in"><i class="fa fa-instagram" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-outline-fb"><i class="fa fa-facebook-square" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-outline-tw"><i class="fa fa-twitter-square" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-outline-in"><i class="fa fa-instagram" aria-hidden="true"></i></button>
 
-                        </p>
+                    </p>
 
-                    </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
         
         <!-- Modal -->
                 <div class="modal fade" id="pizzaModal" role="dialog">

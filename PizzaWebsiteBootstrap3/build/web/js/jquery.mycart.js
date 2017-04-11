@@ -48,7 +48,15 @@
     /*
     PRIVATE
     */
-    localStorage.products = localStorage.products ? localStorage.products : "";
+   
+       if (localStorage.products === null){
+           localStorage.products = localStorage.products ? localStorage.products : "";
+       } else {
+           localStorage.setItem(products);
+       }
+       
+   
+    
     var getIndexOfProduct = function(id){
       var productIndex = -1;
       var products = getAllProducts();
@@ -62,6 +70,16 @@
     }
     var setAllProducts = function(products){
       localStorage.products = JSON.stringify(products);
+      
+      $.ajax({
+            type: "POST",
+            url: 'update-basket-contents.jsp',
+            data: { 'param': localStorage.products },
+            success: function (info) {
+                console.log(localStorage.products + info);
+            }
+        });
+      
     }
     var addProduct = function(id, name, summary, price, quantity, image) {
       var products = getAllProducts();

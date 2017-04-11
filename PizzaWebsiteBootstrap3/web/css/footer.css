@@ -8,29 +8,91 @@ and open the template in the editor.
     Author     : aajoubert
 */
 
-html, body {
-  height: 100%;
-  margin: 0;
- 
-  
-}
 .wrapper {
   min-height: 100%;
 
   /* Equal to height of footer */
   /* But also accounting for potential margin-bottom of last child */
-  margin-bottom: -150px;
+  margin-bottom: 20px;
 }
-.footer,
+
+/*.footer,
 .push {
   height: 150px;
   color:white;
   
+}*/
+* { box-sizing: border-box; }
+html {
+     min-height: 100%; 
 }
-.footer-background{
-    background-color: rgba(128,128,128,0.5);
+body {
+  
+       min-height: 100%;
 }
 
-.footer a {
-    color: black;
+.main {
+  
+  z-index: 1;
+  position: relative;
+  margin: 0;
+  
+  /*Main background */
+  background: url("../background.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  height: 100%;
+  /*Size of footer */
+  margin-bottom: 200px;
+  
+  &:after {
+      
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3rem;
+    font-size: 0.3rem;
+    background-size: 3rem 100%;
+    background-color: transparent;
+    height: 3rem;
+    width: 100%;
+    border: none;
+    margin: 0;
+  }
+}
+
+.hiddenFooter
+{
+  height: 220px;
+  width: 100%;
+  text-align: center;
+  
+  /*Background */
+    background-color: white;
+    background-position: center top;
+    padding-top: 3%;
+  
+  /*font colour*/
+  color: black;
+  position: fixed;
+  bottom: 0; 
+  left: 0;
+  
+  > h2 
+  {
+    font-size: 3em;
+    
+  }
+  a 
+  {
+    color: #DA7555;
+  }
+}
+
+h1 
+{
+  font-size: 3em;
 }

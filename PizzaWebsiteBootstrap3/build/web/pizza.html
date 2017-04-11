@@ -11,6 +11,9 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>Wood Fire</title>
+        
+        <!--Icon-->
+        <link rel="shortcut icon" type="image/x-icon" href="Res/Images/logo.ico">
 
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +29,9 @@ and open the template in the editor.
         <link href="css/background.css" rel="stylesheet" type="text/css"/>
         <link href="css/navbar.css" rel="stylesheet" type="text/css"/>
         <!-- <link href="css/basket.css" rel="stylesheet" type="text/css"/> -->
+        <link href="css/Spinner.css" rel="stylesheet" type="text/css"/>
+        
+
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,9 +40,9 @@ and open the template in the editor.
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>
-        
-        <div class="wrapper">
+    <body onload="pizzaPriceSize()">
+        <section class="main">
+        <div class="wrapper"  onmouseover="pizzaPriceSize()">
         <!-- Navigation Bar and Toggle for Mobile -->
             <nav class="navbar navbar-default navbar-fixed-top">
                 <div class="container-fluid">
@@ -63,6 +69,7 @@ and open the template in the editor.
         <!-- NavBar Right Options -->
                     <ul class="nav navbar-nav navbar-right">
                       <li><a href="#" data-toggle="modal" data-target="#loginModal">login</a></li>
+                      <li><a href="signup.html">SignUp</a></li>
                       <li class="nav-item">
                           <div style="float: right; cursor: pointer; padding-top: 15px">
                             <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
@@ -83,7 +90,7 @@ and open the template in the editor.
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
+                    <div class="thumbnail" >
                         <a class="pop gallery-box">
                             <img src="Res/Images/Pizza/duallayerpepp.jpg" class="img-responsive" alt="Delicious pepperoni pizza" title="Pepperoni">
                             <div class="gallery-box-caption">
@@ -95,21 +102,54 @@ and open the template in the editor.
                             </div>
                         </a>
                         <div class="caption">
-                            <h3>Pepperoni</h3>
-                            <p>Delicious pepperoni pizza</p>
+                            <fieldset>
+                                <legend>Pepperoni</legend>
+                                <p>Delicious Pepperoni Pizza</p>
+                             </fieldset>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group">
+
+
+                                        <select class="form-control col-sm-2" name="expiryMonth" id="pizzaSize1" onclick="pizzaPriceSize()">
+                                            <option value="01">Size: Medium</option>
+                                            <option value="02">Size: Large</option>
+                                            <option value="03">Size: X-Large</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="input-group spinner">
+                                            <input type="text" class="form-control" value="1" min="1" id="pizzaQuantity1">
+                                            <div class="input-group-btn-vertical">
+                                              <button class="btn btn-default" type="button" onclick="pizzaPriceUp()"><i class="fa fa-caret-up"></i></button>
+                                              <button class="btn btn-default" type="button" onclick="pizzaPriceDown()"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h4 id="pizzaPrice1"></h4>
+                                </div>
+                            </div>
+                            <br/>
                             <div class="btn-group btn-group-justified" role="group" aria-label="...">
                                 <div class="btn-group" role="group">
-                                  <button class="btn btn-default my-cart-btn" data-id="1" data-name="Pepperoni" data-summary="summary 1" data-price="10" data-quantity="1" data-image="Res/Images/Pizza/duallayerpepp.jpg">Add to Basket</button>
+                                  <button class="btn btn-default my-cart-btn" data-id="1" data-name="Pepperoni" data-summary="summary 1" data-price="7.50" data-quantity="1" data-image="Res/Images/Pizza/duallayerpepp.jpg">Add to Basket</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                  <button class="btn btn-default">Customise</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Test -->
                 
                 <div class="col-sm-6 col-md-4">
-                  <div class="thumbnail">
+                    <div class="thumbnail">
                         <a class="pop gallery-box">
-                            <img src="Res/Images/Pizza/greek.jpg" class="img-responsive" alt="Delicious greek pizza" title="Greek">
+                            <img src="Res/Images/Pizza/garden-party.jpg" class="img-responsive" alt="Delicious Roasted Veg Pizza" title="RoastedVeg">
                             <div class="gallery-box-caption">
                                 <div class="gallery-box-content">
                                     <div>
@@ -118,181 +158,367 @@ and open the template in the editor.
                                 </div>
                             </div>
                         </a>
-                      <div class="caption">
-                        <h3>Greek</h3>
-                        <p>Delicious greek pizza</p>
-                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                            <div class="btn-group" role="group">
-                              <button class="btn btn-default my-cart-btn" data-id="2" data-name="Greek" data-summary="summary 1" data-price="10" data-quantity="1" data-image="http://placehold.it/50x50">Add to Basket</button>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-6 col-md-4">
-                  <div class="thumbnail">
-                        <a class="pop gallery-box">
-                            <img src="Res/Images/Pizza/garden-party.jpg" class="img-responsive" alt="Delicious roasted veg pizza" title="Roasted Veg">
-                            <div class="gallery-box-caption">
-                                <div class="gallery-box-content">
-                                    <div>
-                                        <h4>Click Me To Customise</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                      <div class="caption">
-                        <h3>Roasted Veg</h3>
-                        <p>Delicious roasted veg pizza</p>
-                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                            <div class="btn-group" role="group">
-                              <button class="btn btn-default my-cart-btn" data-id="3" data-name="Roasted Veg" data-summary="summary 1" data-price="10" data-quantity="1" data-image="http://placehold.it/50x50">Add to Basket</button>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            
-            <div class="col-sm-6 col-md-4">
-                  <div class="thumbnail">
-                        <a class="pop gallery-box">
-                            <img src="Res/Images/Pizza/meatfeast.jpg" class="img-responsive" alt="Delicious meat feast pizza" title="Meat Feast">
-                            <div class="gallery-box-caption">
-                                <div class="gallery-box-content">
-                                    <div>
-                                        <h4>Click Me To Customise</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                      <div class="caption">
-                        <h3>Meat Feast</h3>
-                        <p>Delicious meat feast pizza</p>
-                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                            <div class="btn-group" role="group">
-                              <button class="btn btn-default my-cart-btn" data-id="4" data-name="Meat Feast" data-summary="summary 1" data-price="10" data-quantity="1" data-image="http://placehold.it/50x50">Add to Basket</button>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-6 col-md-4">
-                  <div class="thumbnail">
-                        <a class="pop gallery-box">
-                            <img src="Res/Images/Pizza/bbqchicken.jpg" class="img-responsive" alt="Delicious BBQ chicken pizza" title="BBQ Chicken">
-                            <div class="gallery-box-caption">
-                                <div class="gallery-box-content">
-                                    <div>
-                                        <h4>Click Me To Customise</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                      <div class="caption">
-                        <h3>BBQ Chicken</h3>
-                        <p>Delicious BBQ chicken pizza</p>
-                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                            <div class="btn-group" role="group">
-                              <button class="btn btn-default my-cart-btn" data-id="5" data-name="BBQ Chicken" data-summary="summary 1" data-price="10" data-quantity="1" data-image="http://placehold.it/50x50">Add to Basket</button>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-6 col-md-4">
-                  <div class="thumbnail">
-                        <a class="pop gallery-box">
-                            <img src="Res/Images/Pizza/hawaiian.jpg" class="img-responsive" alt="Delicious hawaiian pizza" title="Hawaiian">
-                            <div class="gallery-box-caption">
-                                <div class="gallery-box-content">
-                                    <div>
-                                        <h4>Click Me To Customise</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                      <div class="caption">
-                        <h3>Hawaiian</h3>
-                        <p>Delicious hawaiian pizza</p>
-                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                            <div class="btn-group" role="group">
-                              <button class="btn btn-default my-cart-btn" data-id="6" data-name="Hawaiian" data-summary="summary 1" data-price="10" data-quantity="1" data-image="http://placehold.it/50x50">Add to Basket</button>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            
-            <div class="col-sm-6 col-md-4">
-                  <div class="thumbnail">
-                        <a class="pop gallery-box">
-                            <img src="Res/Images/Pizza/Tinga_Taco_Original.jpg" class="img-responsive" alt="Delicious roman pizza" title="The Roman">
-                            <div class="gallery-box-caption">
-                                <div class="gallery-box-content">
-                                    <div>
-                                        <h4>Click Me To Customise</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                      <div class="caption">
-                        <h3>The Roman</h3>
-                        <p>Delicious roman pizza</p>
-                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                            <div class="btn-group" role="group">
-                              <button class="btn btn-default my-cart-btn" data-id="7" data-name="The Roman" data-summary="summary 1" data-price="10" data-quantity="1" data-image="http://placehold.it/50x50">Add to Basket</button>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                
+                        <div class="caption">
+                            <fieldset>
+                                <legend>Roasted Veg</legend>
+                                <p>Delicious Roasted Veg Pizza</p>
+                             </fieldset>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group">
 
-        
+
+                                          <select class="form-control col-sm-2" name="expiryMonth" id="pizzaSize2" onclick="pizzaPriceSize()">
+                                            <option value="01">Size: Medium</option>
+                                            <option value="02">Size: Large</option>
+                                            <option value="03">Size: X-Large</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    	 <div class="input-group spinner">
+                                            <input type="text" class="form-control" value="1" min="1" id="pizzaQuantity2" >
+                                            <div class="input-group-btn-vertical">
+                                              <button class="btn btn-default" type="button" onclick="pizzaPriceUp()"><i class="fa fa-caret-up"></i></button>
+                                              <button class="btn btn-default" type="button" onclick="pizzaPriceDown()"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                          </div>
+                                </div>
+                                
+                                <div class="col-sm-6 col-md-3">
+                                    <h4 id="pizzaPrice2">£7.50</h4>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                <div class="btn-group" role="group">
+                                  <button class="btn btn-default my-cart-btn" data-id="2" data-name="Roasted Veg" data-summary="summary 1" data-price="7.75" data-quantity="1" data-image="Res/Images/Pizza/duallayerpepp.jpg">Add to Basket</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                  <button class="btn btn-default">Customise</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <a class="pop gallery-box">
+                            <img src="Res/Images/Pizza/greek.jpg" class="img-responsive" alt="Delicious Greek Pizza" title="Greek">
+                            <div class="gallery-box-caption">
+                                <div class="gallery-box-content">
+                                    <div>
+                                        <h4>Click Me To Customise</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="caption">
+                            <fieldset>
+                                <legend>Greek</legend>
+                                <p>Delicious Greek Pizza</p>
+                             </fieldset>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group">
+
+
+                                          <select class="form-control col-sm-2" name="expiryMonth" id="pizzaSize3" onclick="pizzaPriceSize()">
+                                            <option value="01">Size: Medium</option>
+                                            <option value="02">Size: Large</option>
+                                            <option value="03">Size: X-Large</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    	<div class="input-group spinner">
+                                            <input type="text" class="form-control" value="1" min="1" id="pizzaQuantity3">
+                                            <div class="input-group-btn-vertical">
+                                              <button class="btn btn-default" type="button" onclick="pizzaPriceUp()"><i class="fa fa-caret-up"></i></button>
+                                              <button class="btn btn-default" type="button" onclick="pizzaPriceDown()"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h4 id="pizzaPrice3">£7.50</h4>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                <div class="btn-group" role="group">
+                                  <button class="btn btn-default my-cart-btn" data-id="3" data-name="Greek" data-summary="summary 1" data-price="7.50" data-quantity="1" data-image="Res/Images/Pizza/greek.jpg">Add to Basket</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                  <button class="btn btn-default">Customise</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <a class="pop gallery-box">
+                            <img src="Res/Images/Pizza/meatfeast.jpg" class="img-responsive" alt="Delicious Meat Feast" title="Meat Feast">
+                            <div class="gallery-box-caption">
+                                <div class="gallery-box-content">
+                                    <div>
+                                        <h4>Click Me To Customise</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="caption">
+                            <fieldset>
+                                <legend>Meat Feast</legend>
+                                <p>Delicious Meat Feast</p>
+                             </fieldset>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group">
+
+
+                                          <select class="form-control col-sm-2" name="expiryMonth" id="pizzaSize4" onclick="pizzaPriceSize()">
+                                            <option value="01">Size: Medium</option>
+                                            <option value="02">Size: Large</option>
+                                            <option value="03">Size: X-Large</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    	<div class="input-group spinner">
+                                            <input type="text" class="form-control" value="1" min="1" id="pizzaQuantity4">
+                                            <div class="input-group-btn-vertical">
+                                              <button class="btn btn-default" type="button" onclick="pizzaPriceUp()"><i class="fa fa-caret-up"></i></button>
+                                              <button class="btn btn-default" type="button" onclick="pizzaPriceDown()"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h4 id="pizzaPrice4">£7.50</h4>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                <div class="btn-group" role="group">
+                                  <button class="btn btn-default my-cart-btn" data-id="4" data-name="Meat Feast" data-summary="summary 1" data-price="7.50" data-quantity="1" data-image="Res/Images/Pizza/meatfeast.jpg">Add to Basket</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                  <button class="btn btn-default">Customise</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <a class="pop gallery-box">
+                            <img src="Res/Images/Pizza/bbqchicken.jpg" class="img-responsive" alt="Delicious BBQ Chicken Pizza" title="BBQ Chicken">
+                            <div class="gallery-box-caption">
+                                <div class="gallery-box-content">
+                                    <div>
+                                        <h4>Click Me To Customise</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="caption">
+                            <fieldset>
+                                <legend>BBQ Chicken</legend>
+                                <p>Delicious BBQ Chicken Pizza</p>
+                             </fieldset>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group">
+
+
+                                          <select class="form-control col-sm-2" name="expiryMonth" id="pizzaSize5" onclick="pizzaPriceSize()">
+                                            <option value="01">Size: Medium</option>
+                                            <option value="02">Size: Large</option>
+                                            <option value="03">Size: X-Large</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    	<div class="input-group spinner">
+                                            <input type="text" class="form-control" value="1" min="1" id="pizzaQuantity5">
+                                            <div class="input-group-btn-vertical">
+                                              <button class="btn btn-default" type="button" onclick="pizzaPriceUp()"><i class="fa fa-caret-up"></i></button>
+                                              <button class="btn btn-default" type="button" onclick="pizzaPriceDown()"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h4 id="pizzaPrice5">£7.50</h4>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                <div class="btn-group" role="group">
+                                  <button class="btn btn-default my-cart-btn" data-id="5" data-name="BBQ Chicken" data-summary="summary 1" data-price="7.50" data-quantity="1" data-image="Res/Images/Pizza/bbqchicken.jpg">Add to Basket</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                  <button class="btn btn-default">Customise</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <a class="pop gallery-box">
+                            <img src="Res/Images/Pizza/hawaiian.jpg" class="img-responsive" alt="Delicious Hawaiian Pizza" title="Hawaiian">
+                            <div class="gallery-box-caption">
+                                <div class="gallery-box-content">
+                                    <div>
+                                        <h4>Click Me To Customise</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="caption">
+                            <fieldset>
+                                <legend>Hawaiian</legend>
+                                <p>Delicious Hawaiian Pizza</p>
+                             </fieldset>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group">
+
+
+                                          <select class="form-control col-sm-2" name="expiryMonth" id="pizzaSize6" onclick="pizzaPriceSize()">
+                                            <option value="01">Size: Medium</option>
+                                            <option value="02">Size: Large</option>
+                                            <option value="03">Size: X-Large</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    	<div class="input-group spinner">
+                                            <input type="text" class="form-control" value="1" min="1" id="pizzaQuantity6">
+                                            <div class="input-group-btn-vertical">
+                                              <button class="btn btn-default" type="button" onclick="pizzaPriceUp()"><i class="fa fa-caret-up"></i></button>
+                                              <button class="btn btn-default" type="button" onclick="pizzaPriceDown()"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h4 id="pizzaPrice6">£7.50</h4>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                <div class="btn-group" role="group">
+                                  <button class="btn btn-default my-cart-btn" data-id="6" data-name="Hawaiian" data-summary="summary 1" data-price="7.50" data-quantity="1" data-image="Res/Images/Pizza/hawaiian.jpg">Add to Basket</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                  <button class="btn btn-default">Customise</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <a class="pop gallery-box">
+                            <img src="Res/Images/Pizza/Tinga_Taco_Original.jpg" class="img-responsive" alt="Delicious Roman Pizza" title="Roman">
+                            <div class="gallery-box-caption">
+                                <div class="gallery-box-content">
+                                    <div>
+                                        <h4>Click Me To Customise</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="caption">
+                            <fieldset>
+                                <legend>The Roman</legend>
+                                <p>Delicious Roman Pizza</p>
+                             </fieldset>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group">
+
+
+                                          <select class="form-control col-sm-2" name="expiryMonth" id="pizzaSize7" onclick="pizzaPriceSize()">
+                                            <option value="01">Size: Medium</option>
+                                            <option value="02">Size: Large</option>
+                                            <option value="03">Size: X-Large</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    	<div class="input-group spinner">
+                                            <input type="text" class="form-control" value="1" min="1" id="pizzaQuantity7">
+                                            <div class="input-group-btn-vertical">
+                                              <button class="btn btn-default" type="button" onclick="pizzaPriceUp()"><i class="fa fa-caret-up"></i></button>
+                                              <button class="btn btn-default" type="button" onclick="pizzaPriceDown()"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <h4 id="pizzaPrice7">£7.50</h4>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                <div class="btn-group" role="group">
+                                  <button class="btn btn-default my-cart-btn" data-id="7" data-name="The Roman" data-summary="summary 1" data-price="7.50" data-quantity="1" data-image="Res/Images/Pizza/Tinga_Taco_Original.jpg">Add to Basket</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                  <button class="btn btn-default">Customise</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             <div class="push"></div>
         </div>
+        </section>
         
         <!-- Footer -->
         <br/>
-        <footer class="footer">
-            <div class="container">
-                <div class="row" >
-                    <div class="col-md-2">
-                        <b>Store Location</b>
-                        <br/>
-                        <p>Wood Fire <br>
-                                13 Mutley Plain <br>
-                                Plymouth <br>
-                                PL4 8HY
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <b>About</b>
-                        <br/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Maecenas gravida sollicitudin nulla, et posuere nibh euismod vel.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <b>Contact Us</b>
-                        <br/>
-                        <p>1604 666 222 <br>
-                            <a href="#">info@woodfire.com</a> <br>
+       <footer class="hiddenFooter">
+        <div>
+            <div class="row" >
+                <div class="col-md-2" id="location">
+                    <b>Store Location</b>
+                    <br/>
+                    <p>Wood Fire <br>
+                            13 Mutley Plain <br>
+                            Plymouth <br>
+                            PL4 8HY
+                    </p>
+                </div>
+                <div class="col-md-8">
+                    <b>About</b>
+                    <br/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Maecenas gravida sollicitudin nulla, et posuere nibh euismod vel.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    </p>
+                </div>
+                <div class="col-md-2" id="contact">
+                    <b>Contact Us</b>
+                    <br/>
+                    <p>1604 666 222 <br>
+                        <a href="#">info@woodfire.com</a> <br>
 
-                            <button type="button" class="btn btn-outline-fb"><i class="fa fa-facebook-square" aria-hidden="true"></i></button>
-                            <button type="button" class="btn btn-outline-tw"><i class="fa fa-twitter-square" aria-hidden="true"></i></button>
-                            <button type="button" class="btn btn-outline-in"><i class="fa fa-instagram" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-outline-fb"><i class="fa fa-facebook-square" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-outline-tw"><i class="fa fa-twitter-square" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-outline-in"><i class="fa fa-instagram" aria-hidden="true"></i></button>
 
-                        </p>
+                    </p>
 
-                    </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
         
         <!-- Modal -->
                 <div class="modal fade" id="pizzaModal" role="dialog">
@@ -390,5 +616,8 @@ and open the template in the editor.
         <script src="js/modal.js" type="text/javascript"></script>
         <script src="js/jquery.mycart.js" type="text/javascript"></script>
         <script src="js/basket.js" type="text/javascript"></script>
+        <script src="js/pizza-price.js" type="text/javascript"></script>
+        <!-- Spinner -->
+        <script src="js/spinner.js" type="text/javascript"></script>
     </body>
 </html>
