@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_orders"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ben.matt.OrdersActivity">
+
+    <ExpandableListView
+        android:id="@+id/simpleExpandableListView"
+        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:divider="#f00"
+        android:dividerHeight="1dp"
+        android:childDivider="#0f0"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="106dp"
+        android:layout_marginEnd="106dp"
+        android:layout_above="@+id/btnGoToHomepage" />
+
+
+    <Button
+        android:text="Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/btnGoToHomepage" />
+
+    <Button
+        android:text="Route"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRoute"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/btnGoToHomepage"
+        android:layout_toEndOf="@+id/btnGoToHomepage" />
+
+    <Button
+        android:text="Finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnFinish"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btnCompleted"
+        android:layout_toStartOf="@+id/btnCompleted" />
+
+    <Button
+        android:text="Completed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCompleted"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

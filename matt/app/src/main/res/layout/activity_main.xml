@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.ben.matt.MainActivity">
+
+    <Button
+        android:text="View Orders"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:id="@+id/btnViewOrders"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/textClock"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLogout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Sign Out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sign_out_button"
+        android:layout_above="@+id/sign_out_and_disconnect"
+        android:layout_alignLeft="@+id/sign_out_and_disconnect"
+        android:layout_alignStart="@+id/sign_out_and_disconnect" />
+
+    <Button
+        android:text="Sign Out and Disconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sign_out_and_disconnect"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Disconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/disconnect_button"
+        android:layout_above="@+id/sign_out_and_disconnect"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/txtDisplayUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: "
+        android:textColor="@android:color/black"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/sign_in_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/txtSession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Session time: "
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/btnOpenMaps"
+        android:layout_toEndOf="@+id/btnOpenMaps" />
+
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/textClock" />
+
+    <Button
+        android:id="@+id/btnOpenMaps"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:text="Open Maps"
+        android:layout_alignTop="@+id/btnViewOrders"
+        android:layout_toLeftOf="@+id/btnViewOrders"
+        android:layout_toStartOf="@+id/btnViewOrders" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnOpenMaps"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/btnLocationCoarse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnLogout"
+        android:layout_alignParentStart="true"
+        android:text="Location" />
+
+</RelativeLayout>
