@@ -1,0 +1,106 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11-Apr-2017, 18:50:23
+    Author     : aldmar
+*/
+
+#shopping-cart {
+	margin: 1.5em 0;
+}
+
+.shopping-cart {
+	border: 1px solid #ddd;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.shopping-cart th {
+	font-size: 1.3em;
+	padding: 0.3em;
+	width: 33.3%;
+	border: 1px solid #ddd;
+	text-transform: uppercase;
+}
+
+.shopping-cart td {
+	padding: 0.3em;
+	width: 33.3%;
+	border: 1px solid #ddd;
+}
+
+.shopping-cart tr:nth-child(even) {
+	background: #fafafa;
+}
+
+.shopping-cart td.pdelete {
+	text-align: center;
+}
+
+.pdelete a,
+.pdelete a:hover {
+	color: #c00;
+	text-decoration: none;
+	font-size: 2.5em;
+	display: block;
+	text-align: center;
+}
+
+#shopping-cart-actions {
+	margin: 1.5em 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+#shopping-cart-actions li {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+#pricing {
+	padding: 0.5em;
+	margin: 1em 0;
+	background: #fafafa;
+}
+
+#sub-total, #shipping {
+	margin: 1.5em 0;
+	text-align: right;
+}
+
+#sub-total span,
+#shipping span {
+	margin-left: 1em;
+}
+
+#content > h1,
+#checkout-order-form h2 {
+	font-size: 2em;
+	text-align: center;
+}
+
+#pricing #sub-total,
+#pricing #shipping {
+	margin: 1em 0;
+}
+
+.sharp {
+  border-radius:0;
+}
+
+ .badge-notify{
+    background:red;
+    position:relative;
+    top: -20px;
+    right: 10px;
+  }
+  .my-cart-icon-affix {
+    position: fixed;
+    z-index: 999;
+  }

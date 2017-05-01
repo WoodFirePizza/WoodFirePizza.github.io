@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wood Fire</title>
+<meta charset="utf-8" />
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    
+    <!-- Custom css 
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />-->
+    <link href="css/Spinner.css" rel="stylesheet" type="text/css"/>
+    <link href="css/basket.css" rel="stylesheet" type="text/css"/>
+
+
+</head>
+
+<body>
+    <div id="site">
+	<!-- Navigation Bar and Toggle for Mobile -->
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Wood Fire</a>
+                  </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    
+
+        <!-- NavBar Right Options -->
+                    <ul class="nav navbar-nav navbar-right">
+                      <li><a href="#" data-toggle="modal" data-target="#basketModal">basket</a></li>
+                       <li class="nav-item">
+                          <div style="float: right; cursor: pointer; padding-top: 15px">
+                            <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
+                          </div>
+                      </li>
+                    </ul>
+                  </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        
+        <!-- Break From NavBar -->
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+    
+    <div class="container">
+        
+        <div class="row">
+            
+            
+                    <div class="col-md-4">
+
+                        <div class="thumbnail">
+                            
+                                <img src="images/bbqchicken.jpg" alt=""/>
+                            
+                            <div class="caption">
+                                <div data-name="chicken" data-price="7.50" data-img="images/garden-party.jpg">
+                                        <fieldset>
+                                            <legend>chicken</legend>
+                                            <p>Delicious chicken Pizza</p>
+                                        </fieldset>
+                                        <form class="add-to-cart"  method="post">
+                                                <div class="row">
+                                                   <div class="col-sm-12 col-md-6">
+                                                        <div class="form-group">
+                                                        <select class="form-control col-sm-2 size" name="pizzaSize" id="pizzaSize" onclick="pizzaPriceSize()">
+                                                            <option value="M">Size: Medium</option>
+                                                            <option value="L">Size: Large</option>
+                                                            <option value="XL">Size: X-Large</option>
+                                                          </select>
+                                                    </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-3">
+                                                        <div class="input-group spinner">
+                                                                <input type="text" class="form-control qty" value="1" min="1" id="pizzaQuantity1">
+                                                                <div class="input-group-btn-vertical">
+                                                                  <button class="btn btn-default" type="button" onclick="pizzaPriceUp()"><i class="fa fa-caret-up"></i></button>
+                                                                  <button class="btn btn-default" type="button" onclick="pizzaPriceDown()"><i class="fa fa-caret-down"></i></button>
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-3">
+                                                        <h4 id="pizzaPrice1">£7.50</h4>
+                                                    </div>
+                                                </div>
+                                                <p style="text-align: center;"><input type="submit" value="Add to Basket" class="btn btn-success my-cart-btn" data-image="images/bbqchicken.jpg" /></p>
+                                        </form>
+                                        
+                                        
+                                        
+                                        
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                    <div class="col-md-4">
+
+                        <div class="thumbnail">
+                            
+                            <img src="images/duallayerpepp.jpg" alt=""/>
+                            
+                            <div class="caption">
+                                <div  data-name="pepperoni" data-price="5" data-img="images/garden-party.jpg">
+                                    <fieldset>
+                                            <legend>Pepperoni</legend>
+                                            <p>Delicious pepperoni Pizza</p>
+                                        </fieldset>
+                                     <form class="add-to-cart"  method="post">
+                                        <div class="row">
+                                           <div class="col-sm-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <select class="form-control col-sm-2 size" name="pizzaSize" id="pizzaSize" onclick="pizzaPriceSize()">
+                                                            <option value="M">Size: Medium</option>
+                                                            <option value="L">Size: Large</option>
+                                                            <option value="XL">Size: X-Large</option>
+                                                          </select>
+                                                    </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-3">
+                                                <div class="input-group spinner">
+                                                        <input type="text" class="form-control qty" value="1" min="1" id="pizzaQuantity1">
+                                                        <div class="input-group-btn-vertical">
+                                                          <button class="btn btn-default" type="button" onclick="pizzaPriceUp()"><i class="fa fa-caret-up"></i></button>
+                                                          <button class="btn btn-default" type="button" onclick="pizzaPriceDown()"><i class="fa fa-caret-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-3">
+                                                <h4 id="pizzaPrice1">£7.50</h4>
+                                            </div>
+                                        </div>
+                                        <p style="text-align: center;"><input type="submit" value="Add to cart" class="btn btn-success" /></p>
+                                    </form>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+
+                        <div class="thumbnail">
+                            
+                            <img src="images/garden-party.jpg" alt=""/>
+                            
+                            <div class="caption">
+                                <div  data-name="veg" data-price="5" data-img="images/garden-party.jpg">
+                                        <fieldset>
+                                            <legend>veg</legend>
+                                            <p>Delicious veg Pizza</p>
+                                        </fieldset>
+                                         <form class="add-to-cart"  method="post">
+                                            <div class="row">
+                                               <div class="col-sm-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <select class="form-control col-sm-2 size" name="pizzaSize" id="pizzaSize" onclick="pizzaPriceSize()">
+                                                            <option value="M">Size: Medium</option>
+                                                            <option value="L">Size: Large</option>
+                                                            <option value="XL">Size: X-Large</option>
+                                                          </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 col-md-3">
+                                                    <div class="input-group spinner">
+                                                            <input type="text" class="form-control qty" value="1" min="1" id="pizzaQuantity1">
+                                                            <div class="input-group-btn-vertical">
+                                                              <button class="btn btn-default" type="button" onclick="pizzaPriceUp()"><i class="fa fa-caret-up"></i></button>
+                                                              <button class="btn btn-default" type="button" onclick="pizzaPriceDown()"><i class="fa fa-caret-down"></i></button>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <div class="col-sm-6 col-md-3">
+                                                    <h4 id="pizzaPrice1">£7.50</h4>
+                                                </div>
+                                            </div>
+                                            
+                                                <p style="text-align: center;"><input type="submit" value="Add to cart" class="btn btn-success btn-justified" /></p>
+                                            
+                                        </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              
+            
+        </div>
+        
+        </div>
+    
+    
+     <!-- Basket Modal -->
+        <div class="modal fade" id="basketModal" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3>Your Basket</h3>
+              </div>
+              <div class="modal-body">
+                  <form id="shopping-cart" action="cart.html" method="post">
+                        <table class="shopping-cart table">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Item</th>
+                                    <th scope="col">Size</th>
+                                    <th scope="col">Qty</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col"></th>
+                                </tr>
+                          </thead>
+                          <tbody>
+
+                          </tbody>
+                        </table>
+                        <p id="sub-total">
+                                <strong>Total</strong>: <span id="stotal"></span>
+                        </p>
+                 </form>
+             </div>
+                <div class="modal-footer">
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <a data-dismiss="modal" class="btn btn-success sharp">Continue Shopping</a>
+                        <a href="checkoutDetails.html" class="classCheckoutCart btn btn-primary sharp">Go To Checkout</a>
+                    </div>
+                </div>
+            </div>
+
+          </div>
+        </div>
+    </div>
+
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script> 
+        <script src="js/spinner.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/jquery.shop.js"></script>
+       <!-- <script src="js/sessionStorage.js" type="text/javascript"></script>
+        <script src="js/jquery.mycart.js" type="text/javascript"></script>
+        <script src="js/basket.js" type="text/javascript"></script>-->
+        
+</body>
+</html>	
