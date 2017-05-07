@@ -1,0 +1,26 @@
+/* 
+    Created on : 05-May-2017, 19:16:32
+    Author     : aajoubert
+*/
+
+
+.icon-cart{
+  border:solid 10px orange;
+  width:100px;
+  height:100px;
+  position:absolute;
+  top:30px;
+  right:30px;
+}
+.bookImg {
+    background-color: #fff;
+    float: left;
+    margin: 0 10px 10px 0;
+    width: 205px;
+    padding: 10px;
+    height: 290px;
+}
+.bookImg img {
+    display: block;
+    margin: auto;
+}
