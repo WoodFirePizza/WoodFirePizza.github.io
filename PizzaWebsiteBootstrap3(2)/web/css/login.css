@@ -1,0 +1,29 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07-Mar-2017, 15:14:28
+    Author     : aajoubert
+*/
+
+.modal-header, h4, .close {
+      background-color: #7F0000;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-footer {
+      background-color: white;;
+  }
+  
+  .login-btn
+  {
+       background-color: #7F0000;
+  }
+  
+  #loginModal
+  {
+      z-index: 10001;
+  }

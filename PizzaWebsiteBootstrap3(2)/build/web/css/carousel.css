@@ -1,0 +1,174 @@
+#item1
+{
+    background: url("../Res/Car Images/slider1.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#item2
+{
+    background: url("../Res/Car Images/four-plates-of-wings.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}
+#item3
+{
+    background: url("../Res/Car Images/slider5.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}
+
+.carousel-inner
+{  
+    height: calc(100vh - 6vh - 15vh - 15vh);
+    width: 100%;
+
+}
+.carousel-inner h3
+{  
+    font-size: 5vh;
+}
+.carousel-inner p
+{  
+    font-size: 4vh;
+}
+.item
+{
+    height: 100%;
+    width: 100%;
+}
+
+
+.carousel-indicators
+{
+    top: 2vh;
+    pointer-events:none
+}
+
+
+/*Button Two*/
+.button-two {
+  border-radius: 4px;
+  background-color:#990000;
+  border: none;
+  padding: 1vh;
+  width: 15vw;
+  height: 5vh;
+  transition: all 0.5s;
+  font-size: 1.5vh;
+}
+
+
+.button-two span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-two span:after {
+  font-family: "FontAwesome";
+  content: '\f054';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-two-basket {
+  border-radius: 4px;
+  background-color:#990000;
+  border: none;
+  padding: 1vh;
+  width: 15vw;
+  height: 5vh;
+  transition: all 0.5s;
+}
+
+.button-two:hover span {
+  padding-right: 25px;
+}
+
+.button-two:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button-two-basket span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-two-basket span:after {
+  font-family: "FontAwesome";
+  content: "  \f291";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-two-basket:hover span {
+  padding-right: 25px;
+}
+
+.button-two-basket:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+/* Tablet nav */
+@media(min-width: 601px) and (max-width: 999px)
+{
+    #nav
+    {
+        display: none;
+    }
+    #social
+    {
+        display: none;
+    }
+}
+    
+    
+
+
+/*Mobile nav */
+@media(max-width: 600px) 
+{
+    .carousel-inner
+    {
+       height: calc(100vh - 15vh);
+       width: 100%; 
+    }
+    
+    .carousel-inner h3
+    {  
+        font-size: 5vh;
+        
+    }
+    .carousel-inner p
+    {  
+        font-size: 4vh;
+        padding-bottom: 5vh;
+    }
+    
+    .button-two 
+    {
+
+    width: 45vw;
+    height: 5vh;
+  
+    }
+
+}
