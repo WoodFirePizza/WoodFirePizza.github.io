@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>PayPal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+    </head>
+    <body>
+    
+        <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+
+        <div id="paypal-button-container"></div>
+
+        <script>
+
+            // Render the PayPal button
+
+            paypal.Button.render({
+
+                // Set your environment
+
+                env: 'sandbox', // sandbox | production
+                
+                 style: {
+                    size: 'small',
+                    color: 'blue',
+                    shape: 'rect',
+                    label: 'checkout'
+                },
+
+                // PayPal Client IDs - replace with your own
+                // Create a PayPal app: https://developer.paypal.com/developer/applications/create
+
+                client: {
+                    sandbox:    'AWLIZB_eHofkty8NsuHNykW1Y-D6WRL5Cz-PGwE8Qt8HSTNrifqRe8RMuNNqa7pfR5ZVRuKQeJTp95LT',
+                    production: '<insert production client id>'
+                },
+
+                // Set to 'Pay Now'
+
+                commit: true,
+
+                // Wait for the PayPal button to be clicked
+
+                payment: function() {
+
+                    // Make a client-side call to the REST api to create the payment
+
+                    return paypal.rest.payment.create(this.props.env, this.props.client, {
+                        transactions: [
+                            {
+                                amount: { total: '0.01', currency: 'GBP' }
+                            }
+                        ]
+                    });
+                },
+
+                // Wait for the payment to be authorized by the customer
+
+                onAuthorize: function(data, actions) {
+
+                    // Execute the payment
+
+                    return actions.payment.execute().then(function() {
+                        document.querySelector('#paypal-button-container').innerText = 'Payment Complete!';
+                    });
+                }
+
+            }, '#paypal-button-container');
+
+        </script>
+
+
+
+    </body>
+</html>
