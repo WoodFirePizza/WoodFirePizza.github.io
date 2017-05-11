@@ -1,0 +1,516 @@
+body
+{
+    background: url("../Res/background.jpg")no-repeat center center fixed;
+ 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    margin: 0;
+    padding: 0;
+    
+    max-height: 100%;
+}
+
+.headOut
+{
+   height: 15vh;
+   background:#7F0000;
+}
+
+.headImage
+{
+    height: 100%;
+    width: 10vw;
+    margin: auto;
+    display: block;
+}
+
+header img {
+    
+   display: block;
+   margin: auto;
+   height: 100%;
+   
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   
+}
+
+header img:hover {
+   opacity: 0.75;
+}
+
+.headInner
+{
+    position: fixed;
+    height:3vh;
+    width: 20vw;
+    top: 2.5vh;
+    right: -2vw;
+    z-index: 3;
+}
+
+.headInner a
+{
+    font-size: 2vh;
+    color: white;
+    font-family:'Lato',sans-serif;
+    text-decoration:none;
+    
+    padding-left: 2vw;
+    
+    opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.headInner a:hover, .headInner a:focus {
+    
+    text-decoration:none;
+    color: white;
+    
+    opacity: 0.5;
+}
+
+h1 {
+    font-size:1vh;
+    font-weight:300;
+    text-align:center;
+    font-weight:700
+}
+
+/* Nav Bar Container */
+.container-fluid
+{
+    height:6vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar Div */
+nav.main-nav {
+    
+    z-index: 12;
+    background:#7F0000;
+    
+    border-radius: 0;
+    border: none;
+    border-bottom:1px solid white;
+    
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    
+    
+}
+
+/* Navbar List Items */
+nav.main-nav li 
+{ 
+    
+    width: 24.6vw;
+    margin: 0;
+    
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+/* Navbar List Item text */
+
+.nav.navbar-nav li a 
+{
+    color: white;
+    text-align: center;
+    font-size: 2vh;
+    
+}
+
+.nav.navbar-nav li a:hover 
+{
+    color: white;
+    opacity: 0.5;
+}
+
+nav.main-nav.stickytop {
+    position:fixed;
+    top:0
+}
+
+#desktopHide
+{
+    display: none;
+}
+
+#active
+{
+    opacity: 0.5;
+}
+
+#mobileBasket
+{
+    display: none;
+}
+
+/* Tablet nav */
+@media(min-width: 768px) and (max-width: 1024px)
+{
+    #mobileBasket
+    {
+       display: block;
+       position: absolute;
+       top: 30%;
+       right: 10%;
+       color: white;
+    }
+    
+    #mobileBasket:hover
+    {
+       opacity: 0.5;
+    }
+    
+    #desktopHide
+    {
+        display: inline;
+        color: white;
+        padding-left: 5vw;
+    }
+     
+    /* Nav Bar Container */
+    .container-fluid
+    {
+        height:4vh;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        
+    }
+    
+    .navbar-default 
+    {
+        background-color: #7F0000;
+        border-color: #7F0000;
+        height: 4vh;
+
+        
+       
+    }
+    
+    .navbar-default .navbar-brand:hover,
+    .navbar-default .navbar-brand:focus 
+    {
+        color: white;
+        opacity: 0.5;
+    }
+    
+    /* Navbar items */
+    
+    
+    .navbar-default .navbar-nav 
+    {
+        margin: auto;
+        background: #7F0000;
+        width: 60vw;
+        border-bottom:1px solid white; 
+    }
+    .navbar-default .navbar-nav > li
+    {
+        
+        margin: auto;
+        width: 100%;
+        
+        padding-bottom: 1vh;
+        padding-right: 2vw;
+        
+        
+    }
+    .navbar-default .navbar-nav > li > a, #desktopHide.navItem
+    {
+        display: block;
+        color: white;
+        
+        text-align: center;
+        
+        padding-left: 5%;
+        background: #7F0000;
+    }
+    
+    /* HAMBURGER STUFF */
+    /* Hamburger boarder */
+    .navbar-default .navbar-toggle 
+    {
+        border-color: #7F0000;
+    }
+
+    /* Hamburger on click */
+    .navbar-default .navbar-toggle:hover,
+    .navbar-default .navbar-toggle:focus 
+    {
+        opacity: 0.5;
+    }
+    
+    /* Hamburger Icon */
+    .navbar-default .navbar-toggle .icon-bar 
+    {
+        background-color: white;
+    }
+
+    /* Woodire brand */
+    .navbar-default .navbar-brand 
+    {
+        display: inline;
+        color: white;
+    }
+    
+    .navbar-header 
+    {
+        float: none;
+    }
+    
+    .navbar-left,.navbar-right 
+    {
+        float: none !important;
+    }
+    /* Display Hamburger */
+    .navbar-toggle 
+    {
+        display: block;
+    }
+    
+    .navbar-fixed-top 
+    {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    
+    .navbar-collapse.collapse 
+    {
+        display: none!important;
+    }
+    .navbar-nav 
+    {
+        float: none!important;
+        
+    }
+    .navbar-nav>li 
+    {
+        float: none;
+        width: 100%;
+    }
+    .navbar-nav li a 
+    {
+        
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
+    }
+    .collapse.in
+    {
+        display:block !important;
+    }
+    
+   .navbar-nav .open .dropdown-menu 
+   {
+       position: static;
+       float: none;
+       width: auto;
+       margin-top: 0;
+       background-color: transparent;
+       border: 0;
+       -webkit-box-shadow: none;
+       box-shadow: none;
+    }
+
+    #mobileHide
+    {
+        display: none;
+    }
+    
+}
+
+@media(max-width: 767px)
+{
+   #mobileBasket
+    {
+       display: block;
+       position: absolute;
+       top: 30%;
+       right: 15%;
+       color: white;
+    }
+    
+    
+     #desktopHide
+    {
+        display: inline;
+        color: white;
+        padding-left: 5vw;
+    }
+    
+    #desktopHide img
+    {
+        display: inline;
+        width: auto;
+        height: 3vh;
+    }
+    
+    
+    /* Nav Bar Container */
+    .container-fluid
+    {
+        height:4vh;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        
+    }
+    
+    .navbar-default 
+    {
+        background-color: #7F0000;
+        border-color: #7F0000;
+        height: 4vh;
+
+        
+       
+    }
+    
+    .navbar-default .navbar-brand:hover,
+    .navbar-default .navbar-brand:focus 
+    {
+        color: white;
+        opacity: 0.5;
+    }
+    
+    /* Navbar items */
+    
+    
+    .navbar-default .navbar-nav 
+    {
+        margin: auto;
+        background: #7F0000;
+        width: 60vw;
+        border-bottom:1px solid white; 
+    }
+    .navbar-default .navbar-nav > li 
+    {
+        
+        margin: auto;
+        width: 100%;
+        
+        padding-bottom: 1vh;
+        padding-right: 2vw;
+        
+        
+    }
+    .navbar-default .navbar-nav > li > a 
+    {
+        display: block;
+        color: white;
+        text-align: center;
+        padding-left: 5%;
+        background: #7F0000;
+        
+        
+    }
+    
+    /* HAMBURGER STUFF */
+    /* Hamburger boarder */
+    .navbar-default .navbar-toggle 
+    {
+        border-color: #7F0000;
+    }
+
+    /* Hamburger on click */
+    .navbar-default .navbar-toggle:hover,
+    .navbar-default .navbar-toggle:focus 
+    {
+        opacity: 0.5;
+    }
+    
+    /* Hamburger Icon */
+    .navbar-default .navbar-toggle .icon-bar 
+    {
+        background-color: white;
+    }
+
+    /* Woodire brand */
+    .navbar-default .navbar-brand 
+    {
+        display: inline;
+        color: white;
+        margin-left: 2%;
+    }
+    
+    .navbar-header 
+    {
+        float: none;
+    }
+    
+    .navbar-left,.navbar-right 
+    {
+        float: none !important;
+    }
+    /* Display Hamburger */
+    .navbar-toggle 
+    {
+        display: block;
+    }
+    
+    .navbar-fixed-top 
+    {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    
+    .navbar-collapse.collapse 
+    {
+        display: none!important;
+    }
+    .navbar-nav 
+    {
+        float: none!important;
+        
+    }
+    .navbar-nav>li 
+    {
+        float: none;
+        width: 100%;
+    }
+    .navbar-nav li a 
+    {
+        
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
+    }
+    .collapse.in
+    {
+        display:block !important;
+    }
+    
+   .navbar-nav .open .dropdown-menu 
+   {
+       position: static;
+       float: none;
+       width: auto;
+       margin-top: 0;
+       background-color: transparent;
+       border: 0;
+       -webkit-box-shadow: none;
+       box-shadow: none;
+    }
+
+    #mobileHide
+    {
+        display: none;
+    }
+}
+
+
