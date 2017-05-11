@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="12.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ADMIN">
+    <Key>
+      <PropertyRef Name="Person_ID" />
+    </Key>
+    <Property Name="Admin_ID" Type="varchar2" MaxLength="10" />
+    <Property Name="Person_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Salary" Type="number" Precision="8" Scale="2" />
+  </EntityType>
+  <EntityType Name="CHEF">
+    <Key>
+      <PropertyRef Name="Person_ID" />
+    </Key>
+    <Property Name="Chef_ID" Type="varchar2" MaxLength="10" />
+    <Property Name="Person_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Salary" Type="number" Precision="8" Scale="2" />
+  </EntityType>
+  <EntityType Name="DELIVERY_ADDRESS">
+    <Key>
+      <PropertyRef Name="Delivery_Address_ID" />
+    </Key>
+    <Property Name="Delivery_Address_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Member_ID" Type="varchar2" MaxLength="10" />
+    <Property Name="Address1" Type="varchar2" MaxLength="30" Nullable="false" />
+    <Property Name="Address2" Type="varchar2" MaxLength="30" />
+    <Property Name="Town_City" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="County" Type="varchar2" MaxLength="15" />
+    <Property Name="Postcode" Type="varchar2" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DRINK">
+    <Key>
+      <PropertyRef Name="Drink_ID" />
+    </Key>
+    <Property Name="Drink_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Menu_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Size" Type="nvarchar2" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="DRIVER">
+    <Key>
+      <PropertyRef Name="Person_ID" />
+    </Key>
+    <Property Name="Driver_ID" Type="varchar2" MaxLength="10" />
+    <Property Name="Person_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Salary" Type="number" Precision="8" Scale="2" />
+    <Property Name="IsLoggedIn" Type="char" MaxLength="1" />
+    <Property Name="Valid_License" Type="char" MaxLength="1" />
+    <Property Name="Vehicle_Type" Type="varchar2" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="DRIVER_AUDIT">
+    <Key>
+      <PropertyRef Name="Driver_Audit_ID" />
+    </Key>
+    <Property Name="Driver_Audit_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Driver_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Duration" Type="number" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityType Name="FOOD">
+    <Key>
+      <PropertyRef Name="Food_ID" />
+    </Key>
+    <Property Name="Food_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Menu_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Type" Type="nvarchar2" MaxLength="10" />
+    <Property Name="IsGlutenFree" Type="char" MaxLength="1" />
+    <Property Name="IsVegeterian" Type="char" MaxLength="1" />
+    <Property Name="IsSpicy" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="INGREDIENT">
+    <Key>
+      <PropertyRef Name="Ingredient_ID" />
+    </Key>
+    <Property Name="Ingredient_ID" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="Description" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MEMBER">
+    <Key>
+      <PropertyRef Name="Person_ID" />
+    </Key>
+    <Property Name="Member_ID" Type="varchar2" MaxLength="10" />
+    <Property Name="Person_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Reward_Points" Type="number" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityType Name="MENU">
+    <Key>
+      <PropertyRef Name="Menu_ID" />
+    </Key>
+    <Property Name="Menu_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Name" Type="varchar2" MaxLength="30" Nullable="false" />
+    <Property Name="Price" Type="number" Precision="5" Scale="2" />
+    <Property Name="img_source" Type="varchar2" MaxLength="30" />
+    <Property Name="Description" Type="varchar2" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="OFFER">
+    <Key>
+      <PropertyRef Name="Offer_ID" />
+    </Key>
+    <Property Name="Offer_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Total_Price" Type="number" Precision="5" Scale="2" />
+    <Property Name="Start_Date" Type="date" Nullable="false" />
+    <Property Name="End_Date" Type="date" Nullable="false" />
+    <Property Name="Description" Type="varchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="OFFER_ITEM">
+    <Key>
+      <PropertyRef Name="Offer_Item_ID" />
+    </Key>
+    <Property Name="Offer_Item_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Offer_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Menu_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ORDER">
+    <Key>
+      <PropertyRef Name="Order_ID" />
+    </Key>
+    <Property Name="Order_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Member_ID" Type="varchar2" MaxLength="10" />
+    <Property Name="Driver_ID" Type="varchar2" MaxLength="10" />
+    <Property Name="Total_Price" Type="number" Precision="5" Scale="2" />
+    <Property Name="DELIVERYADDRESSID" Type="varchar2" MaxLength="10" />
+    <Property Name="TEMP_DELIVERYADDRESSID" Type="varchar2" MaxLength="10" />
+    <Property Name="ISPAID" Type="char" MaxLength="1" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Time" Type="varchar2" MaxLength="8" />
+    <Property Name="IsDelivery" Type="char" MaxLength="1" />
+    <Property Name="Status" Type="varchar2" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="ORDER_ITEM">
+    <Key>
+      <PropertyRef Name="Order_Item_ID" />
+    </Key>
+    <Property Name="Order_Item_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Order_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Menu_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Quantity" Type="number" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="Notes" Type="varchar2" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PERSON">
+    <Key>
+      <PropertyRef Name="Person_ID" />
+    </Key>
+    <Property Name="Person_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Forename" Type="varchar2" MaxLength="30" Nullable="false" />
+    <Property Name="Surname" Type="varchar2" MaxLength="30" Nullable="false" />
+    <Property Name="DOB" Type="date" Nullable="false" />
+    <Property Name="Email" Type="nvarchar2" MaxLength="50" />
+    <Property Name="Mobile_Number" Type="char" MaxLength="11" />
+    <Property Name="Town_City" Type="varchar2" MaxLength="20" />
+    <Property Name="County" Type="varchar2" MaxLength="15" />
+    <Property Name="Postcode" Type="varchar2" MaxLength="10" />
+    <Property Name="Address2" Type="varchar2" MaxLength="30" />
+    <Property Name="Address1" Type="varchar2" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="RECIPE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Ingredient_ID" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="Food_ID" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="ID" Type="varchar2" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STOCK">
+    <Key>
+      <PropertyRef Name="Stock_ID" />
+    </Key>
+    <Property Name="Stock_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Stock_Name" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="Quantity" Type="number" Precision="5" Scale="0" />
+    <Property Name="Cost" Type="number" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="TEMP_DELIVERYADDRESS">
+    <Key>
+      <PropertyRef Name="T_DELIVERY_ID" />
+    </Key>
+    <Property Name="T_DELIVERY_ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="ADDRESS1" Type="varchar2" MaxLength="30" Nullable="false" />
+    <Property Name="ADDRESS2" Type="varchar2" MaxLength="30" />
+    <Property Name="TOWN_CITY" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="COUNTY" Type="varchar2" MaxLength="15" />
+    <Property Name="POSTCODE" Type="varchar2" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserLogin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar2" MaxLength="10" Nullable="false" />
+    <Property Name="Person_ID" Type="varchar2" MaxLength="10" />
+    <Property Name="Username" Type="varchar2" MaxLength="15" Nullable="false" />
+    <Property Name="Password" Type="varchar2" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_DELIVERYADDRESSID">
+    <End Role="DELIVERY_ADDRESS" Type="Self.DELIVERY_ADDRESS" Multiplicity="0..1" />
+    <End Role="ORDER" Type="Self.ORDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DELIVERY_ADDRESS">
+        <PropertyRef Name="Delivery_Address_ID" />
+      </Principal>
+      <Dependent Role="ORDER">
+        <PropertyRef Name="DELIVERYADDRESSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FOODID_RECIPE">
+    <End Role="FOOD" Type="Self.FOOD" Multiplicity="1" />
+    <End Role="RECIPE" Type="Self.RECIPE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FOOD">
+        <PropertyRef Name="Food_ID" />
+      </Principal>
+      <Dependent Role="RECIPE">
+        <PropertyRef Name="Food_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INGREDIENTID_RECIPE">
+    <End Role="INGREDIENT" Type="Self.INGREDIENT" Multiplicity="1" />
+    <End Role="RECIPE" Type="Self.RECIPE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INGREDIENT">
+        <PropertyRef Name="Ingredient_ID" />
+      </Principal>
+      <Dependent Role="RECIPE">
+        <PropertyRef Name="Ingredient_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MENUID_DRINK">
+    <End Role="MENU" Type="Self.MENU" Multiplicity="1" />
+    <End Role="DRINK" Type="Self.DRINK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MENU">
+        <PropertyRef Name="Menu_ID" />
+      </Principal>
+      <Dependent Role="DRINK">
+        <PropertyRef Name="Menu_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MENUID_FOOD">
+    <End Role="MENU" Type="Self.MENU" Multiplicity="1" />
+    <End Role="FOOD" Type="Self.FOOD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MENU">
+        <PropertyRef Name="Menu_ID" />
+      </Principal>
+      <Dependent Role="FOOD">
+        <PropertyRef Name="Menu_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MENUID_ORDERITEM">
+    <End Role="MENU" Type="Self.MENU" Multiplicity="1" />
+    <End Role="ORDER_ITEM" Type="Self.ORDER_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MENU">
+        <PropertyRef Name="Menu_ID" />
+      </Principal>
+      <Dependent Role="ORDER_ITEM">
+        <PropertyRef Name="Menu_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OFFERID_OFFERITEM">
+    <End Role="OFFER" Type="Self.OFFER" Multiplicity="1" />
+    <End Role="OFFER_ITEM" Type="Self.OFFER_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OFFER">
+        <PropertyRef Name="Offer_ID" />
+      </Principal>
+      <Dependent Role="OFFER_ITEM">
+        <PropertyRef Name="Offer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDERID_ORDERITEM">
+    <End Role="ORDER" Type="Self.ORDER" Multiplicity="1" />
+    <End Role="ORDER_ITEM" Type="Self.ORDER_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ORDER">
+        <PropertyRef Name="Order_ID" />
+      </Principal>
+      <Dependent Role="ORDER_ITEM">
+        <PropertyRef Name="Order_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERSONID_ADMIN">
+    <End Role="PERSON" Type="Self.PERSON" Multiplicity="1" />
+    <End Role="ADMIN" Type="Self.ADMIN" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PERSON">
+        <PropertyRef Name="Person_ID" />
+      </Principal>
+      <Dependent Role="ADMIN">
+        <PropertyRef Name="Person_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERSONID_CHEF">
+    <End Role="PERSON" Type="Self.PERSON" Multiplicity="1" />
+    <End Role="CHEF" Type="Self.CHEF" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PERSON">
+        <PropertyRef Name="Person_ID" />
+      </Principal>
+      <Dependent Role="CHEF">
+        <PropertyRef Name="Person_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERSONID_DRIVER">
+    <End Role="PERSON" Type="Self.PERSON" Multiplicity="1" />
+    <End Role="DRIVER" Type="Self.DRIVER" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PERSON">
+        <PropertyRef Name="Person_ID" />
+      </Principal>
+      <Dependent Role="DRIVER">
+        <PropertyRef Name="Person_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERSONID_LOGIN">
+    <End Role="PERSON" Type="Self.PERSON" Multiplicity="0..1" />
+    <End Role="UserLogin" Type="Self.UserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSON">
+        <PropertyRef Name="Person_ID" />
+      </Principal>
+      <Dependent Role="UserLogin">
+        <PropertyRef Name="Person_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERSONID_MEMBER">
+    <End Role="PERSON" Type="Self.PERSON" Multiplicity="1" />
+    <End Role="MEMBER" Type="Self.MEMBER" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PERSON">
+        <PropertyRef Name="Person_ID" />
+      </Principal>
+      <Dependent Role="MEMBER">
+        <PropertyRef Name="Person_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TEMP_DELIVERYADDRESSID">
+    <End Role="TEMP_DELIVERYADDRESS" Type="Self.TEMP_DELIVERYADDRESS" Multiplicity="0..1" />
+    <End Role="ORDER" Type="Self.ORDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEMP_DELIVERYADDRESS">
+        <PropertyRef Name="T_DELIVERY_ID" />
+      </Principal>
+      <Dependent Role="ORDER">
+        <PropertyRef Name="TEMP_DELIVERYADDRESSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="ADMIN" EntityType="Self.ADMIN" Schema="PRCS251O" store:Type="Tables" />
+    <EntitySet Name="CHEF" EntityType="Self.CHEF" Schema="PRCS251O" store:Type="Tables" />
+    <EntitySet Name="DELIVERY_ADDRESS" EntityType="Self.DELIVERY_ADDRESS" Schema="PRCS251O" store:Type="Tables" />
+    <EntitySet Name="DRINK" EntityType="Self.DRINK" Schema="PRCS251O" store:Type="Tables" />
+    <EntitySet Name="DRIVER" EntityType="Self.DRIVER" Schema="PRCS251O" store:Type="Tables" />
+    <EntitySet Name="DRIVER_AUDIT" EntityType="Self.DRIVER_AUDIT" Schema="PRCS251O" store:Type="Tables" />
+    <EntitySet Name="FOOD" EntityType="Self.FOOD" Schema="PRCS251O" store:Type="Tables" />
+    <EntitySet Name="INGREDIENT" EntityType="Self.INGREDIENT" Schema="PRCS251O" store:Type="Tables" />
+    <EntitySet Name="MEMBER" EntityType="Self.MEMBER" Schema="PRCS251O" store:Type="Tables" />
+    <EntitySet Name="MENU" EntityType="Self.MENU" Schema="PRCS251O" store:Type="Tables" />
+    <EntitySet Name="OFFER" EntityType="Self.OFFER" Schema="PRCS251O" store:Type="Tables" />
+    <EntitySet Name="OFFER_ITEM" EntityType="Self.OFFER_ITEM" Schema="PRCS251O" store:Type="Tables" />
+    <EntitySet Name="ORDER" EntityType="Self.ORDER" Schema="PRCS251O" store:Type="Tables" />
+    <EntitySet Name="ORDER_ITEM" EntityType="Self.ORDER_ITEM" Schema="PRCS251O" store:Type="Tables" />
+    <EntitySet Name="PERSON" EntityType="Self.PERSON" Schema="PRCS251O" store:Type="Tables" />
+    <EntitySet Name="RECIPE" EntityType="Self.RECIPE" Schema="PRCS251O" store:Type="Tables" />
+    <EntitySet Name="STOCK" EntityType="Self.STOCK" Schema="PRCS251O" store:Type="Tables" />
+    <EntitySet Name="TEMP_DELIVERYADDRESS" EntityType="Self.TEMP_DELIVERYADDRESS" Schema="PRCS251O" store:Type="Tables" />
+    <EntitySet Name="UserLogin" EntityType="Self.UserLogin" Schema="PRCS251O" store:Type="Tables" />
+    <AssociationSet Name="FK_DELIVERYADDRESSID" Association="Self.FK_DELIVERYADDRESSID">
+      <End Role="DELIVERY_ADDRESS" EntitySet="DELIVERY_ADDRESS" />
+      <End Role="ORDER" EntitySet="ORDER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FOODID_RECIPE" Association="Self.FK_FOODID_RECIPE">
+      <End Role="FOOD" EntitySet="FOOD" />
+      <End Role="RECIPE" EntitySet="RECIPE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INGREDIENTID_RECIPE" Association="Self.FK_INGREDIENTID_RECIPE">
+      <End Role="INGREDIENT" EntitySet="INGREDIENT" />
+      <End Role="RECIPE" EntitySet="RECIPE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MENUID_DRINK" Association="Self.FK_MENUID_DRINK">
+      <End Role="MENU" EntitySet="MENU" />
+      <End Role="DRINK" EntitySet="DRINK" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MENUID_FOOD" Association="Self.FK_MENUID_FOOD">
+      <End Role="MENU" EntitySet="MENU" />
+      <End Role="FOOD" EntitySet="FOOD" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MENUID_ORDERITEM" Association="Self.FK_MENUID_ORDERITEM">
+      <End Role="MENU" EntitySet="MENU" />
+      <End Role="ORDER_ITEM" EntitySet="ORDER_ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OFFERID_OFFERITEM" Association="Self.FK_OFFERID_OFFERITEM">
+      <End Role="OFFER" EntitySet="OFFER" />
+      <End Role="OFFER_ITEM" EntitySet="OFFER_ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDERID_ORDERITEM" Association="Self.FK_ORDERID_ORDERITEM">
+      <End Role="ORDER" EntitySet="ORDER" />
+      <End Role="ORDER_ITEM" EntitySet="ORDER_ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERSONID_ADMIN" Association="Self.FK_PERSONID_ADMIN">
+      <End Role="PERSON" EntitySet="PERSON" />
+      <End Role="ADMIN" EntitySet="ADMIN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERSONID_CHEF" Association="Self.FK_PERSONID_CHEF">
+      <End Role="PERSON" EntitySet="PERSON" />
+      <End Role="CHEF" EntitySet="CHEF" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERSONID_DRIVER" Association="Self.FK_PERSONID_DRIVER">
+      <End Role="PERSON" EntitySet="PERSON" />
+      <End Role="DRIVER" EntitySet="DRIVER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERSONID_LOGIN" Association="Self.FK_PERSONID_LOGIN">
+      <End Role="PERSON" EntitySet="PERSON" />
+      <End Role="UserLogin" EntitySet="UserLogin" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERSONID_MEMBER" Association="Self.FK_PERSONID_MEMBER">
+      <End Role="PERSON" EntitySet="PERSON" />
+      <End Role="MEMBER" EntitySet="MEMBER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TEMP_DELIVERYADDRESSID" Association="Self.FK_TEMP_DELIVERYADDRESSID">
+      <End Role="TEMP_DELIVERYADDRESS" EntitySet="TEMP_DELIVERYADDRESS" />
+      <End Role="ORDER" EntitySet="ORDER" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

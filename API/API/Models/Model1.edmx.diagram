@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="118139437cf14e70ac95f0432d756fbb" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.ADMIN" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.CHEF" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DELIVERY_ADDRESS" Width="1.5" PointX="5.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DRINK" Width="1.5" PointX="10.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DRIVER" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DRIVER_AUDIT" Width="1.5" PointX="5.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.FOOD" Width="1.5" PointX="10.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.INGREDIENT" Width="1.5" PointX="10.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.MEMBER" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.MENU" Width="1.5" PointX="8" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.OFFER" Width="1.5" PointX="12.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.OFFER_ITEM" Width="1.5" PointX="15" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ORDER" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ORDER_ITEM" Width="1.5" PointX="10.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PERSON" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.RECIPE" Width="1.5" PointX="12.5" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.STOCK" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TEMP_DELIVERYADDRESS" Width="1.5" PointX="5.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.UserLogin" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_PERSONID_ADMIN" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_PERSONID_CHEF" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_DELIVERYADDRESSID" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_MENUID_DRINK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_PERSONID_DRIVER" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_FOODID_RECIPE" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_MENUID_FOOD" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_INGREDIENTID_RECIPE" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_PERSONID_MEMBER" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_MENUID_ORDERITEM" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_OFFERID_OFFERITEM" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ORDERID_ORDERITEM" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_TEMP_DELIVERYADDRESSID" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_PERSONID_LOGIN" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="PizzaStoreEntities">
+    <EntitySetMapping Name="ADMINs">
+      <EntityTypeMapping TypeName="Model.ADMIN">
+        <MappingFragment StoreEntitySet="ADMIN">
+          <ScalarProperty Name="Admin_ID" ColumnName="Admin_ID" />
+          <ScalarProperty Name="Person_ID" ColumnName="Person_ID" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHEFs">
+      <EntityTypeMapping TypeName="Model.CHEF">
+        <MappingFragment StoreEntitySet="CHEF">
+          <ScalarProperty Name="Chef_ID" ColumnName="Chef_ID" />
+          <ScalarProperty Name="Person_ID" ColumnName="Person_ID" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DELIVERY_ADDRESS">
+      <EntityTypeMapping TypeName="Model.DELIVERY_ADDRESS">
+        <MappingFragment StoreEntitySet="DELIVERY_ADDRESS">
+          <ScalarProperty Name="Delivery_Address_ID" ColumnName="Delivery_Address_ID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Town_City" ColumnName="Town_City" />
+          <ScalarProperty Name="County" ColumnName="County" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DRINKs">
+      <EntityTypeMapping TypeName="Model.DRINK">
+        <MappingFragment StoreEntitySet="DRINK">
+          <ScalarProperty Name="Drink_ID" ColumnName="Drink_ID" />
+          <ScalarProperty Name="Menu_ID" ColumnName="Menu_ID" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DRIVERs">
+      <EntityTypeMapping TypeName="Model.DRIVER">
+        <MappingFragment StoreEntitySet="DRIVER">
+          <ScalarProperty Name="Driver_ID" ColumnName="Driver_ID" />
+          <ScalarProperty Name="Person_ID" ColumnName="Person_ID" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="IsLoggedIn" ColumnName="IsLoggedIn" />
+          <ScalarProperty Name="Valid_License" ColumnName="Valid_License" />
+          <ScalarProperty Name="Vehicle_Type" ColumnName="Vehicle_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DRIVER_AUDIT">
+      <EntityTypeMapping TypeName="Model.DRIVER_AUDIT">
+        <MappingFragment StoreEntitySet="DRIVER_AUDIT">
+          <ScalarProperty Name="Driver_Audit_ID" ColumnName="Driver_Audit_ID" />
+          <ScalarProperty Name="Driver_ID" ColumnName="Driver_ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time_LogIn" ColumnName="Time_LogIn" />
+          <ScalarProperty Name="Time_LogOut" ColumnName="Time_LogOut" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FOODs">
+      <EntityTypeMapping TypeName="Model.FOOD">
+        <MappingFragment StoreEntitySet="FOOD">
+          <ScalarProperty Name="Food_ID" ColumnName="Food_ID" />
+          <ScalarProperty Name="Menu_ID" ColumnName="Menu_ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsGlutenFree" ColumnName="IsGlutenFree" />
+          <ScalarProperty Name="IsVegeterian" ColumnName="IsVegeterian" />
+          <ScalarProperty Name="IsSpicy" ColumnName="IsSpicy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INGREDIENTs">
+      <EntityTypeMapping TypeName="Model.INGREDIENT">
+        <MappingFragment StoreEntitySet="INGREDIENT">
+          <ScalarProperty Name="Ingredient_ID" ColumnName="Ingredient_ID" />
+          <ScalarProperty Name="Food_ID" ColumnName="Food_ID" />
+          <ScalarProperty Name="Ingredient_name" ColumnName="Ingredient_name" />
+          <ScalarProperty Name="IsRemove" ColumnName="IsRemove" />
+          <ScalarProperty Name="IsExtra" ColumnName="IsExtra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MEMBERs">
+      <EntityTypeMapping TypeName="Model.MEMBER">
+        <MappingFragment StoreEntitySet="MEMBER">
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Person_ID" ColumnName="Person_ID" />
+          <ScalarProperty Name="Reward_Points" ColumnName="Reward_Points" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MENUs">
+      <EntityTypeMapping TypeName="Model.MENU">
+        <MappingFragment StoreEntitySet="MENU">
+          <ScalarProperty Name="Menu_ID" ColumnName="Menu_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="img_source" ColumnName="img_source" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OFFERs">
+      <EntityTypeMapping TypeName="Model.OFFER">
+        <MappingFragment StoreEntitySet="OFFER">
+          <ScalarProperty Name="Offer_ID" ColumnName="Offer_ID" />
+          <ScalarProperty Name="Total_Price" ColumnName="Total_Price" />
+          <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+          <ScalarProperty Name="End_Date" ColumnName="End_Date" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OFFER_ITEM">
+      <EntityTypeMapping TypeName="Model.OFFER_ITEM">
+        <MappingFragment StoreEntitySet="OFFER_ITEM">
+          <ScalarProperty Name="Offer_Item_ID" ColumnName="Offer_Item_ID" />
+          <ScalarProperty Name="Offer_ID" ColumnName="Offer_ID" />
+          <ScalarProperty Name="Menu_ID" ColumnName="Menu_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDERs">
+      <EntityTypeMapping TypeName="Model.ORDER">
+        <MappingFragment StoreEntitySet="ORDER">
+          <ScalarProperty Name="ISPAID" ColumnName="ISPAID" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Member_ID" ColumnName="Member_ID" />
+          <ScalarProperty Name="Date_Time" ColumnName="Date_Time" />
+          <ScalarProperty Name="Driver_ID" ColumnName="Driver_ID" />
+          <ScalarProperty Name="Total_Price" ColumnName="Total_Price" />
+          <ScalarProperty Name="DELIVERYADDRESSID" ColumnName="DELIVERYADDRESSID" />
+          <ScalarProperty Name="TEMP_DELIVERYADDRESSID" ColumnName="TEMP_DELIVERYADDRESSID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDER_ITEM">
+      <EntityTypeMapping TypeName="Model.ORDER_ITEM">
+        <MappingFragment StoreEntitySet="ORDER_ITEM">
+          <ScalarProperty Name="Order_Item_ID" ColumnName="Order_Item_ID" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Menu_ID" ColumnName="Menu_ID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="Model.PERSON">
+        <MappingFragment StoreEntitySet="PERSON">
+          <ScalarProperty Name="Person_ID" ColumnName="Person_ID" />
+          <ScalarProperty Name="Forename" ColumnName="Forename" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile_Number" ColumnName="Mobile_Number" />
+          <ScalarProperty Name="Town_City" ColumnName="Town_City" />
+          <ScalarProperty Name="County" ColumnName="County" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STOCKs">
+      <EntityTypeMapping TypeName="Model.STOCK">
+        <MappingFragment StoreEntitySet="STOCK">
+          <ScalarProperty Name="Stock_ID" ColumnName="Stock_ID" />
+          <ScalarProperty Name="Stock_Name" ColumnName="Stock_Name" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TEMP_DELIVERYADDRESS">
+      <EntityTypeMapping TypeName="Model.TEMP_DELIVERYADDRESS">
+        <MappingFragment StoreEntitySet="TEMP_DELIVERYADDRESS">
+          <ScalarProperty Name="T_DELIVERY_ID" ColumnName="T_DELIVERY_ID" />
+          <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="TOWN_CITY" ColumnName="TOWN_CITY" />
+          <ScalarProperty Name="COUNTY" ColumnName="COUNTY" />
+          <ScalarProperty Name="POSTCODE" ColumnName="POSTCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserLogins">
+      <EntityTypeMapping TypeName="Model.UserLogin">
+        <MappingFragment StoreEntitySet="UserLogin">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Person_ID" ColumnName="Person_ID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
