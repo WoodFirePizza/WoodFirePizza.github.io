@@ -27,7 +27,7 @@ $( document ).ready(function() {
                                 
                                         htmlText += '<fieldset>';
                                             htmlText += '<legend class="itemName">' + data[key].MENU["Name"] + '</legend>';
-                                            htmlText += '<p class="size itemDescription">Delicious chicken Pizza</p>';
+                                            htmlText += '<p class="size itemDescription">'+ data[key].MENU["Description"]+'</p>';
                                         htmlText += '</fieldset>';
 
                                                 htmlText += '<div class="row">';
