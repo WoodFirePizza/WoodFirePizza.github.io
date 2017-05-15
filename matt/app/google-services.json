@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "289052308413",
+    "project_id": "scenic-adapter-161116"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289052308413:android:96a89a0594060885",
+        "android_client_info": {
+          "package_name": "com.example.ben.matt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "289052308413-eedt010plq10j00bp2d1t9e2rme6lm7a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ben.matt",
+            "certificate_hash": "2d665112099a268399a283a54ff64aecc2583c04"
+          }
+        },
+        {
+          "client_id": "289052308413-8qq4ajgnk21akjd3tnc5rfjf3958haaa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA75wb0HX6V5-Z77bbVcHzR2wC6Fr5O5F4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
