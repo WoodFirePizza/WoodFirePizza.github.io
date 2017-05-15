@@ -1,0 +1,22 @@
+
+.member
+{
+    cursor: pointer;
+    display: inline;
+}
+
+.dropDown
+{
+    background-color: #7F0000;
+    border-color: white !important;;
+    color: white !important;;
+    
+    padding: 0;
+    margin: 0;
+    
+}
+
+.dropDown li
+{
+    padding-top: 2px;
+}

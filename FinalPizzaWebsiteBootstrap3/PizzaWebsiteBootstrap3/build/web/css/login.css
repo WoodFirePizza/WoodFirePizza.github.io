@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07-Mar-2017, 15:14:28
+    Author     : aajoubert
+*/
+
+.modal-header, h4, .close {
+      background-color: #7F0000;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-footer {
+      background-color: white;;
+  }
+  
+  .loginButton
+  {
+       background-color: #7F0000 !important;;
+       border-color: #7F0000 !important;;
+  }
+  
+  .loginButton:hover
+  {
+       background-color: white !important;;
+       border-color: #7F0000 !important;;
+       color: #7F0000 !important;;
+  }
+  
+  #loginModal
+  {
+      z-index: 10001;
+  }
+  
+  .cancelButton
+  {
+      background-color:#990000 !important;;
+      border-color:#990000 !important;;
+  }
+  .cancelButton:hover
+  {
+    color: #990000 !important;;
+    background-color:white !important;;
+    border-color:#990000!important;;
+  }

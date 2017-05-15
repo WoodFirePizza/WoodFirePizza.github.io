@@ -1,0 +1,172 @@
+.main {
+    
+    /* Give background to main section */
+    background: url("../Res/background.jpg")no-repeat center center fixed;
+ 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+
+    
+    padding: 0;
+    margin: 0;
+    
+    margin-bottom: 15vh;  /*Size of footer */
+    
+    /* Place background ontop of footer */
+    position: relative;
+    height: 100%;
+    z-index: 1;
+
+  &:after {
+      
+    width: 100%;
+    position: absolute;
+    
+    margin: 0;
+    left: 0;
+    border: none;
+  }
+}
+.hiddenFooter
+{
+  
+  
+  position: fixed;
+  bottom: 0;
+  left: 0;
+    
+  height: 15vh;
+  width: 100%;
+  
+  /*Background */
+  background: white;
+  border-top:1px solid white;
+  
+  
+}
+
+.footer b
+{
+    font-size: 1.5vh;
+}
+
+.footer p
+{
+    font-size: 1.25vh;
+}
+
+.footer-copyright
+{
+    text-align: center;
+    width: 100%;
+    
+}
+
+.container
+{
+    width: 80%;
+}
+
+#location
+{
+    text-align: left;
+    
+}
+#nav a
+{
+    color: #7F0000;
+    text-align: left;
+    text-decoration:underline;
+}
+#contact
+{
+    
+    text-align: right;
+    
+}
+#contact a
+{
+    color: #7F0000;
+    text-decoration:underline;
+}
+
+#paypal
+{
+    text-align: center;
+}
+#paypal img
+{
+    width: 10vw;
+    height: auto;
+}
+
+#social
+{
+    text-align: right;
+}
+
+#copyright a
+{
+    color: #7F0000;
+    text-decoration:underline;
+}
+
+/* Half screen nav */
+@media(min-width: 1000px) and (max-width: 1200px)
+{
+    #about
+    {
+        display: none;
+    }
+}   
+
+/* Tablet nav */
+@media(min-width: 768px) and (max-width: 1024px)
+{
+    #nav
+    {
+        display: none;
+    }
+    #social
+    {
+        display: none;
+    }
+    
+    .hiddenFooter
+    {
+        height: 15vh;
+    }
+    
+}
+    
+    
+
+
+/*Mobile nav */
+@media(max-width: 600px) 
+{
+    #nav
+    {
+        display: none;
+    }
+    #social
+    {
+        display: none;
+    }
+    #paypal img
+    {
+        padding-top: 1vh;
+        width:20vw;
+        height: auto;
+    }
+    .footer
+    {
+        font-size: 1vw;
+    }
+    .hiddenFooter
+    {
+        height: 15vh;
+    }
+}

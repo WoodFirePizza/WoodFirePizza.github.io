@@ -1,0 +1,63 @@
+
+.container-fluid
+{
+    height:6vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar Div */
+nav.main-nav {
+    
+    z-index: 12;
+    background:#7F0000;
+    
+    border-radius: 0;
+    border: none;
+    border-bottom:1px solid white;
+    
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    
+    
+}
+
+/* Navbar List Items */
+nav.main-nav li 
+{ 
+
+    
+   width: 20vw;
+   padding-left: 5vw;
+    
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+/* Navbar List Item text */
+.nav.navbar-nav li a 
+{
+    color: white;
+    text-align: center;
+    font-size: 2vh;
+    
+}
+
+#desktopHide
+{
+    display: none;
+}
+
+#active
+{
+    opacity: 0.5;
+}
+
+#mobileBasket
+{
+    display: none;
+}
